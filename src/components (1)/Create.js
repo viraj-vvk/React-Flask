@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { Redirect } from 'react-router-dom'
 
-export const CreateField = (props) => {
+export const Create = (props) => {
+
     const [project, setProject] = useState('')
     const [type_, setType] = useState('')
     const [link, setLink] = useState('')
@@ -38,6 +40,7 @@ export const CreateField = (props) => {
         setDay('')
         setMonth('')
         setYear('')
+        window.location.href = "/"
     }
 
     return (
