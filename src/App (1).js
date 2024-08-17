@@ -1,6 +1,6 @@
-import { Navbar } from "./components/Navbar";
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Navbar } from "./components/Navbar";
 import { ShowData } from "./components/ShowData";
 import { Create } from "./components/Create";
 import { Update } from "./components/Update";
@@ -61,8 +61,8 @@ function App() {
           <Switch>
             <Route exact path="/" render={() => <ShowData fields={fields} toUpdate={setToUpdate} toShow={setToShow} onDelete={deleteField} />} />
             <Route path="/create" render={() => <Create onAdd={addTask} />} />
-            <Route path="/view" render={() => toShow.length ? <View field={toShow} toUpdate={setToUpdate} onDelete={deleteField} /> : window.location.href = "/"} />
-            <Route path="/update" render={() => toUpdate.length ? <Update onUpdate={updateField} updateField={toUpdate} /> : window.location.href = "/"} />
+            <Route path="/view" render={() => toShow.length !== 0 ? <View field={toShow} toUpdate={setToUpdate} onDelete={deleteField} /> : window.location.href = "/"} />
+            <Route path="/update" render={() => toUpdate.length !== 0 ? <Update onUpdate={updateField} updateField={toUpdate} /> : window.location.href = "/"} />
           </Switch>
         </div>
       </Router>

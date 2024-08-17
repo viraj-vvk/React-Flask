@@ -7,8 +7,9 @@ export const Field = ({ field, toUpdate, toShow, onDelete }) => {
         <tr>
             <th scope="row">{field.id}</th>
             <td>{field.project}</td>
+            <td>{field.type_}</td>
             <td>
-                <a href={field.website} target="blank">{field.website}</a>
+                <a href={field.website} target="_blank" onClick={() => console.log(field.website)}>{field.website}</a>
             </td>
             <td>
                 <Link to="/view" onClick={() => toShow(field)} className="mx-3"><FaEye /> </Link>

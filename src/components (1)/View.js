@@ -6,6 +6,7 @@ export const View = ({ field, toUpdate, onDelete }) => {
             <h1 className="display-6">{field.project}</h1>
             <p><strong>Link: </strong><a href={field.link} target="blank">{field.link}</a></p>
             <p><strong>Website: </strong><a href={field.website} target="blank">{field.website}</a></p>
+            <p><strong>Type: </strong>{field.type_}</p>
             <p><strong>Bid: </strong>{field.bid}</p>
             <p><strong>Lead: </strong>{field.lead}</p>
             <p><strong>Man Days: </strong>{field.man_days}</p>
